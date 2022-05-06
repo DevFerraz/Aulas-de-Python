@@ -1,0 +1,6 @@
+n = input('Digite algo, serao testadas suas variaveis: ')
+print(type(n))
+print('ele e alfanumerico?', n.isalnum())
+print('esta tudo em minusculo?', n.islower())
+print('esta tudo em maiusculo?', n.isupper())
+print('o valor e um espaco?', n.isspace())
