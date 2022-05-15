@@ -4,6 +4,7 @@ time = float(input('Em quantos anos voce quer parcelar o imovel? '))
 time2 = time*12
 factor1 = value/time2
 if factor1 > income*0.3:
+    print('A parcela sera de: R${:.2f}' .format(factor1))
     print('Seu emprestimo foi negado')
 else:
     print('Seu emprestimo foi aprovado! ')
