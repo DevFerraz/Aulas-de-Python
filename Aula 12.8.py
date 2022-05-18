@@ -10,4 +10,4 @@ elif IMC <= 30:
 elif IMC <= 40:
     print('Seu IMC eh de {:.1f}. Cuidado, voce esta obeso! '.format(IMC))
 elif IMC > 40:
-    print('Seu IMC eh de {:.1f} e voce esta obesidade morbida! Precisamos mudar sua dieta! '.format(IMC))
+    print('Seu IMC eh de {:.1f} e voce esta em obesidade morbida! Precisamos mudar sua dieta! '.format(IMC))
