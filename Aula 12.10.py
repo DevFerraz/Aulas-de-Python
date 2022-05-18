@@ -1,6 +1,12 @@
 import random
+import time
 pc = random.choice(['Pedra', 'Papel', 'Tesoura'])
 user = str(input('Vamos jogar? Escolha pedra, papel ou tesoura: ')).strip()
+print('JO')
+time.sleep(0.8)
+print('KEN')
+time.sleep(0.8)
+print('PO!')
 if pc == 'Pedra' and user == 'PAPEL'.lower():
     print('Voce venceu! Eu escolhi {}! ' .format(pc))
 elif pc == 'Pedra' and user == 'TESOURA'.lower():
