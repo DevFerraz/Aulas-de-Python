@@ -6,7 +6,7 @@ n4 = n1 < n2 + n3 and n2 < n1 + n3 and n3 < n1 + n2
 if n4 == 1:
     print('Otimo, esses sao valores possiveis para formar um triangulo! ')
 else:
-    print('Nao eh possivel formar nenhum triangulo! ')
+    print('Nao eh possivel formar um triangulo! ')
 time.sleep(1)
 if n1 == n2 == n3 and n4 == 1:
     print('O triangulo formado foi equilatero! ')
