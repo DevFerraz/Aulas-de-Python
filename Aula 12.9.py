@@ -1,5 +1,8 @@
 valor_produto = float(input('Digite o valor do produto a ser comprado: '))
-forma_pgto = int(input('Digite (1) para pgt em dinheiro ou cheque, (2) para cartao a vista, (3) para cartao em 2x e (4) cartao em 3 ou mais parcelas: '))
+forma_pgto = int(input('''Digite (1) para pgt em dinheiro ou cheque, 
+(2) para cartao a vista, 
+(3) para cartao em 2x e 
+(4) cartao em 3 ou mais parcelas: '''))
 if forma_pgto == 1:
     print('Voce escolheu dinheiro/cheque e recebeu 10% de desconto! O valor sera de {:.2f}!' .format(valor_produto*0.9))
 elif forma_pgto == 2:
