@@ -4,12 +4,13 @@ listaImpar = []
 num = int(input('Digite um número inteiro: '))
 lista.append(num)
 resposta = ''
-while resposta != 'Nn':
-    if resposta == 'Nn':
+while True:
+    resposta = input(print('Deseja continuar? ')).upper()
+    if resposta == 'S':
+        num = int(input('Digite um número inteiro: '))
+        lista.append(num)
+    else:
         break
-    resposta = input(print('Deseja continuar? '))
-    num = int(input('Digite um número inteiro: '))
-    lista.append(num)
 for c in range(0, len(lista)):
     if c % 2 == 0:
         listaPar.append(lista.index(c))

@@ -8,5 +8,5 @@ while num != 999:
         lista == lista
     else:
         lista.append(num)
-lista.sort
+lista.sort()
 print(f'Os valores em ordem crescente ficam assim: {lista}')
