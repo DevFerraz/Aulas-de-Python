@@ -1,16 +1,15 @@
 lista = []
 listaPar = []
 listaImpar = []
-num = int(input('Digite um número inteiro: '))
-lista.append(num)
-resposta = ''
 while True:
-    resposta = input(print('Deseja continuar? ')).upper()
-    if resposta == 'S':
-        num = int(input('Digite um número inteiro: '))
-        lista.append(num)
-    else:
+    lista.append(int(input('Digite um número inteiro: ')))
+    resposta = str(input('Deseja continuar? '))
+    if resposta in 'Nn':
         break
+    if resposta in 'Ss':
+        lista == lista
+    else:
+        print('Resposta inválida! ')
 for c in range(0, len(lista)):
     if c % 2 == 0:
         listaPar.append(lista.index(c))
