@@ -10,11 +10,15 @@ while True:
         lista == lista
     else:
         print('Resposta inválida! ')
-for c in range(0, len(lista)):
-    if c % 2 == 0:
-        listaPar.append(lista.index(c))
-    elif c % 2 == 1:
-        listaImpar.append(lista.index(c))
+for c, v in enumerate(lista):
+    if v % 2 == 0:
+        listaPar.append(v)
+    elif v % 2 == 1:
+        listaImpar.append(v)
 print(f'A lista completa é: {lista}')
-print(f'A lista de pares é {listaPar}')
-print(f'A lista de ímpares é {listaImpar}')
+lista.sort()
+listaPar.sort()
+listaImpar.sort()
+print(f'Ordenada de forma crescente fica assim: {lista}')
+print(f'A lista de pares, ordenada de forma crescente é: {listaPar}')
+print(f'A lista de ímpares ordenada de forma crescente é: {listaImpar}')

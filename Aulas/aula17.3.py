@@ -4,6 +4,10 @@ while True:
     r = str(input('Quer continuar? [S/N] '))
     if r in 'Nn':
         break
+    if r in 'Ss':
+        lista == lista
+    else:
+        print('Resposta inválida! ')
 lista.sort(reverse=True)
 print(f'A quantidade de elementos na lista foi de: {len(lista)}')
 print(f'A lista em ordem decrescente fica assim: {lista}')
