@@ -11,8 +11,8 @@ while True:
         print('Digite uma informação válida. ')
     if pessoa["CTPS"] == 0:
         print('Você ainda precisa começar a trabalhar! Até o momento, faltam 35 anos para sua aposentadoria! ')
-        total.append(pessoa.copy())
-        pessoa.clear()
+    total.append(pessoa.copy())
+    pessoa.clear()
     r = str(input('Deseja continuar? [S/N]: '))
     if r in 'Ss':
         total = total
