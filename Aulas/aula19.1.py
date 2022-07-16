@@ -1,9 +1,20 @@
 from random import randint
-total = {}
-jogadores = []
+from operator import itemgetter
+jogadores = {}
+total = []
 for c in range(0, 4):
-    total["Jogador"] = str(input('Digite o nome do jogador: '))
-    total["Valor"] = randint(1, 6)
-    jogadores.append(total.copy())
-for c, v in enumerate(jogadores):
-    print(f'O jogador {jogadores["Jogador"][v]} tirou {jogadores["Valor"][v]}. ')
+    jogadores["Jogador"] = str(input('Digite o nome do jogador: '))
+    jogadores["Valor"] = randint(1, 6)
+    total.append(jogadores.copy())
+    jogadores.clear()
+ranking = []
+for c in total:
+    for d, v in c.items():
+        print(f'{d}: {v} ')
+ranking = sorted(jogadores.items(), key=itemgetter(1), reverse=True)
+for d, v in enumerate(ranking):
+    print(f'O {d} lugar é do jogador {v[0]} que tirou {v[1]} ')
+#for c, d in ranking:
+#    if d[c][1] in ranking == d[c+1][1]:
+#        print('Aconteceu um empate! Tente novamente!')
+#        break
