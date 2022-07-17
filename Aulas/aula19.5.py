@@ -1,31 +1,37 @@
 pessoa = {}
 total = []
+soma = media = 0
+mulheres = []
 while True:
     pessoa["Nome"] = str(input('Digite o nome da pessoa: '))
-    pessoa["Sexo"] = str(input('Digite o sexo da pessoa [M/F]: '))
-    if pessoa["Sexo"] in 'Mm':
-        pessoa = pessoa
-    elif pessoa["Sexo"] in 'Ff':
-        pessoa = pessoa
-    else:
-        print('Resposta inválida')
-        pessoa["Sexo"] = 'Indefinido'
+    while True:
+        pessoa["Sexo"] = str(input('Digite o sexo da pessoa [M/F]: ')).upper()[0]
+        if pessoa["Sexo"] in 'MF':
+            break
+        else:
+            print('Resposta inválida')
     pessoa["Idade"] = int(input('Digite a idade da pessoa: '))
+    soma += pessoa["Idade"]
+    if pessoa["Sexo"] in 'F':
+        mulheres.append(pessoa.copy())
     total.append(pessoa.copy())
     pessoa.clear()
-    r = str(input('Deseja continuar? [S/N]: '))
-    if r in 'Ss':
-        pessoa = pessoa
-    elif r in 'Nn':
+    while True:
+        r = str(input('Deseja continuar? [S/N]: ')).upper()[0]
+        if r in 'SN':
+            break
+        else:
+            print('Resposta inválida! ')
+    if r == 'N':
         break
-    else:
-        print('Resposta inválida! ')
-mulheres = []
-for c, v in enumerate(total):
-    if 'Sexo' in 'Ff':
-        mulheres = v
-print(mulheres)
-
-
-
-
+media = soma / len(total)
+print(f'O total de pessoas cadastradas foi {len(total)}')
+print(f'A média das idades é igual a {media:.2f}')
+print('A lista de mulheres é: ')
+for p in total:
+    if p["Sexo"] == 'F':
+        print(p["Nome"])
+print('As pessoas acima da média foram:')
+for p in total:
+    if p["Idade"] > media:
+        print(f'{p["Nome"]} com {p["Idade"]} anos. ')
