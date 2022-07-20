@@ -25,8 +25,8 @@ def loop():
             num3 = num3 * -1
         print('PREPARANDO SUA CONTAGEM...')
         time.sleep(1.7)
-        print('Vai ficar assim: ')
-        time.sleep(1)
+        print(f'A contagem de {num1} até {num2} com razão {num3} vai ficar assim:')
+        time.sleep(2.5)
         contador(num1, num2, num3)
         print()
         break
@@ -35,9 +35,11 @@ def loop():
 print('-=' * 20)
 print('Contando de 1 a 10 temos: ')
 print('-=' * 20)
+time.sleep(2.5)
 contador(1, 11, 1)
 print()
 print('Contando regressivamente, de 10 a 0, temos: ')
+time.sleep(2.5)
 contador(10, -1, -2)
 print()
 print('Agora é sua vez! ')
