@@ -2,28 +2,30 @@ import random
 import time
 
 listPar = 0
-lista = []
+num = int(input('Digite a quantidade de números que deseja sortear: '))
 
 
-def sort():
-    for e in range(0, 5):
-        r = random.randint(1, 100)
-        lista.append(r)
+def sort(lista):
+    print(f'Sorteando {num} valores da lista... ')
+    time.sleep(2)
+    print('A lista total de números sorteados é igual a: ')
+    for e in range(0, num):
+        n = random.randint(1, 100)
+        lista.append(n)
+        print(n, end=' ')
+        time.sleep(1)
+    print('\nPRONTO! ')
 
 
-def somaPar():
-    dado = 0
-    for d, v in enumerate(lista):
-        if v % 2 == 0:
-            dado += v
-        listPar = dado
+def somaPar(lista):
+    soma = 0
+    for valor in lista:
+        if valor % 2 == 0:
+            soma += valor
+    print(f'A soma de todos os valores pares sorteados é igual a {soma}')
 
 
-sort()
-somaPar()
-print('A lista total de números sorteados é igual a: ')
-for c, f in enumerate(lista):
-    print(f, end=' ')
-    time.sleep(1)
-    print()
-print(f'A soma do total de números pares da lista é igual a {}')
+lst = []
+sort(lst)
+somaPar(lst)
+
