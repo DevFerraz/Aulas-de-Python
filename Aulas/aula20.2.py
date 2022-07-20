@@ -7,10 +7,9 @@ def linha():
 
 
 def contador(a, b, c):
-    linha()
     for d in range(a, b, c):
         print(d, end=' ')
-        time.sleep(1)
+        time.sleep(0.5)
 
 
 def loop():
@@ -33,13 +32,14 @@ def loop():
         break
 
 
-linha()
+print('-=' * 20)
 print('Contando de 1 a 10 temos: ')
+print('-=' * 20)
 contador(1, 11, 1)
-linha()
+print()
 print('Contando regressivamente, de 10 a 0, temos: ')
 contador(10, -1, -2)
-linha()
+print()
 print('Agora é sua vez! ')
 loop()
 while True:
