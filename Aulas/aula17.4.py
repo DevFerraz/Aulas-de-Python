@@ -7,7 +7,7 @@ while True:
     if resposta in 'Nn':
         break
     if resposta in 'Ss':
-        lista == lista
+        lista = lista
     else:
         print('Resposta inválida! ')
 for c, v in enumerate(lista):

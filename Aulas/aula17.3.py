@@ -5,7 +5,7 @@ while True:
     if r in 'Nn':
         break
     if r in 'Ss':
-        lista == lista
+        lista = lista
     else:
         print('Resposta inválida! ')
 lista.sort(reverse=True)

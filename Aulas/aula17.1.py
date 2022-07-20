@@ -3,9 +3,9 @@ num = 0
 while num != 999:
     num = int(input('Digite um valor inteiro (Digite [999] para terminar.):'))
     if num in lista:
-        lista == lista
+        lista = lista
     elif num == 999:
-        lista == lista
+        lista = lista
     else:
         lista.append(num)
 lista.sort()

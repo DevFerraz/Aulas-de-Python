@@ -17,7 +17,7 @@ while True:
     if resposta in 'Nn':
         break
     elif resposta in 'Ss':
-        total == total
+        total = total
     else:
         print('Resposta inválida! ')
 print(f'A quantidade de pessoas na lista é de: {len(total)}')
