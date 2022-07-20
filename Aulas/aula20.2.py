@@ -23,28 +23,39 @@ def loop():
         num3 = int(input('Agora digite como quer que a contagem aconteça: '))
         if num1 > num2 and num3 > 0:
             num3 = num3 * -1
-        elif num3 == 0:
+        if num3 == 0:
             num3 = 1
+        elif num1 < num2 and num3 < 0:
+            num3 = num3 * -1
         print('PREPARANDO SUA CONTAGEM...')
         time.sleep(1.7)
-        print(f'A contagem de {num1} até {num2} com razão {num3} vai ficar assim:')
+        if num2 < num1:
+            print(f'A contagem de {num1} até {num2 + 1} com razão {num3} vai ficar assim:')
+        elif num1 > num2:
+            print(f'A contagem de {num1} até {num2} com razão {num3} vai ficar assim:')
+        else:
+            print(f'A contagem de {num1} até {num2} com razão {num3} vai ficar assim:')
         time.sleep(2.5)
         contador(num1, num2, num3)
         print()
         break
 
 
-print('-=' * 20)
-print('Contando de 1 a 10 temos: ')
-print('-=' * 20)
+print('-=' * 25)
+print(f'           Contando de 1 a 10 temos: ')
+print('-=' * 25)
 time.sleep(2.5)
 contador(1, 11, 1)
 print()
-print('Contando regressivamente, de 10 a 0, temos: ')
+print('-=' * 25)
+print('   Contando regressivamente, de 10 a 0, temos: ')
+print('-=' * 25)
 time.sleep(2.5)
 contador(10, -1, -2)
 print()
-print('Agora é sua vez! ')
+print('-=' * 25)
+print('               Agora é sua vez! ')
+print('-=' * 25)
 loop()
 while True:
     r = str(input('Quer fazer outra contagem? [S/N]: '))
