@@ -23,6 +23,8 @@ def loop():
         num3 = int(input('Agora digite como quer que a contagem aconteça: '))
         if num1 > num2 and num3 > 0:
             num3 = num3 * -1
+        elif num3 == 0:
+            num3 = 1
         print('PREPARANDO SUA CONTAGEM...')
         time.sleep(1.7)
         print(f'A contagem de {num1} até {num2} com razão {num3} vai ficar assim:')
