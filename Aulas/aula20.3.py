@@ -1,41 +1,27 @@
-nrs = []
+import time
 
 
-def maior(*num):
-    nrs2 = num
-    print(f'A lista dos números é essa:\n{num}')
-    print(f'O maior número digitado foi: {max(nrs2)}')
-    print(f'O menor número digitado foi {min(nrs2)}')
-
-
-def loop():
-    while True:
-        t = int(input('Digite um número inteiro: '))
-        if t >= 0:
-            t = t
-            nrs.append(t)
-            break
-        elif t <= 0:
-            t = t
-            nrs.append(t)
-            break
+def maior(* num):
+    cont = biger = 0
+    print('Analisando os valores...')
+    for v in num:
+        print(v, end=' ')
+        time.sleep(1)
+        if cont == 0:
+            biger = v
         else:
-            print('Resposta inválida! Tente novamente! ')
+            if v > biger:
+                biger = v
+        cont += 1
+    print()
+    print(f'Foram informados {cont} valores.')
+    print(f'O maior valor é: {biger}')
+    print()
 
 
-def loop2():
-    while True:
-        r = str(input('Deseja continuar? [S/N]: '))
-        if r in 'Ss':
-            loop()
-        elif r in 'Nn':
-            break
-        else:
-            print('Resposta inválida. Tente novamente! ')
+maior(1, 5, 67, 8, 7, 4)
+maior(8, 9, 12, 3, 45, -30)
+maior(23, 2, 11, 89, 72)
 
-
-loop()
-loop2()
-maior(nrs)
 
 
