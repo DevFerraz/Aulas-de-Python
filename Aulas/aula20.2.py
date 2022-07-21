@@ -47,9 +47,9 @@ print('-=' * 25)
 time.sleep(2.5)
 contador(1, 11, 1)
 print()
-print('-=' * 25)
+print('-=' * 30)
 print('   Contando regressivamente, de 10 a 0 com razão -2, temos: ')
-print('-=' * 25)
+print('-=' * 30)
 time.sleep(2.5)
 contador(10, -1, -2)
 print()
@@ -64,5 +64,5 @@ while True:
     elif r in 'Nn':
         break
     else:
-        print('Resposta invállida! Tente novamente! ')
+        print('Resposta inválida! Tente novamente! ')
 print('Obrigado por jogar! ')
