@@ -31,8 +31,8 @@ def loop():
         time.sleep(1.7)
         if num2 < num1:
             print(f'A contagem de {num1} até {num2 + 1} com razão {num3} vai ficar assim:')
-        elif num1 > num2:
-            print(f'A contagem de {num1} até {num2} com razão {num3} vai ficar assim:')
+        elif num1 < num2:
+            print(f'A contagem de {num1} até {num2 - 1} com razão {num3} vai ficar assim:')
         else:
             print(f'A contagem de {num1} até {num2} com razão {num3} vai ficar assim:')
         time.sleep(2.5)
