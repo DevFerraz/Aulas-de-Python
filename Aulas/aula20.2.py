@@ -20,7 +20,7 @@ def loop():
             num2 += 1
         elif num2 < num1:
             num2 -= 1
-        num3 = int(input('Agora digite como quer que a contagem aconteça: '))
+        num3 = int(input('Agora digite como quer que a contagem aconteça: (Razão) '))
         if num1 > num2 and num3 > 0:
             num3 = num3 * -1
         if num3 == 0:
