@@ -8,7 +8,7 @@ def contador(i, f, p):
     """
     c = i
     while c <= f:
-        print(f'{c} ', end='')
+        print(f'{c}, ', end='')
         c += p
     print('FIM! ')
 
