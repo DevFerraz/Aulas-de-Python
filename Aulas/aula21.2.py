@@ -1,9 +1,9 @@
-import datetime
 #from datetime import date
 #ano atual -> date.today().year
 
 
 def voto(nascimento):
+    import datetime
     data = datetime.date.today()
     ano = int(data.strftime("%Y"))
     opcao = ano - nascimento
