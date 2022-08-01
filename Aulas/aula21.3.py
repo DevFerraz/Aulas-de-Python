@@ -1,9 +1,9 @@
-def fatorial(n=0, show=False):
+def fatorial(n=0, show=''):
     f = 1
     print('Os números gerados na progressão foram:')
     for c in range(n, 0, -1):
         f *= c
-        if show:
+        if show in 'Ss':
             print(c, end='')
             if c > 1:
                 print(' x ', end='')
@@ -11,12 +11,13 @@ def fatorial(n=0, show=False):
                 print(' = ', end='')
                 print(f)
                 print()
-    return f
+        elif show in 'Nn':
+            print(f, end='')
 
 
 def fatorial1():
     fator1 = int(input('Digite o número que deseja saber o fatorial: '))
-    fator2 = bool(input('Deseja saber os números gerados na progressão? '))
+    fator2 = str(input('Deseja saber os números gerados na progressão? '))
     fatorial(fator1, fator2)
 
 
