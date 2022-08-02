@@ -1,4 +1,10 @@
 def fatorial(n=0, show=''):
+    """
+    Cria uma função fatorial
+    :param n: Número a ser descoberto o fatorial
+    :param show: Mostrar ou não o desenvolvimento da conta
+    :return: Retorna o resultado final
+    """
     f = 1
     print('Os números gerados na progressão foram:')
     for c in range(n, 0, -1):
