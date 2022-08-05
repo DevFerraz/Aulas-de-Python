@@ -6,14 +6,16 @@ def ficha(nome='', gols=''):
     :return: sem return
     """
     if nome == '':
-        print('Jogador não definido', end='')
-    if gols == 0 or gols == str:
-        print('Fez 0 gols')
-    if nome != '' and gols != 0 and gols in str:
+        print(f'Jogador não definido fez {gols} gols. ', end='')
+    if gols.isnumeric():
+        gols = int(gols)
+    else:
+        gols = 0
+    if nome != '':
         print(f'O jogador {nome} fez {gols} gols')
 
 
-r1 = input('Digite o nome do jogador: ')
-r2 = input('Digite quantos gols ele fez: ')
+r1 = str(input('Digite o nome do jogador: '))
+r2 = str(input('Digite quantos gols ele fez: '))
 ficha(r1, r2)
 
