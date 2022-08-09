@@ -4,7 +4,7 @@ from uteis import moeda
 def programa():
     while True:
         valor = str(input('Digite o valor da moeda que deseja: R$')).replace(',', '.')
-        if valor.isalpha():
+        if valor.isalpha() or valor.strip() == '':
             valor = -1
         valor = float(valor)
         if valor == -1:
