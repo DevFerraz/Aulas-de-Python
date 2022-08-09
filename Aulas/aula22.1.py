@@ -3,7 +3,7 @@ from uteis import moeda
 
 def programa():
     while True:
-        valor = str(input('Digite o valor da moeda que deseja: R$'))
+        valor = str(input('Digite o valor da moeda que deseja: R$')).replace(',', '.')
         if valor.isalpha():
             valor = -1
         valor = float(valor)
