@@ -13,20 +13,26 @@ def programa():
         print(f'O dobro do valor é: R${moeda.dobro_moeda(valor):.2f}')
         print(f'A metade do valor é: R${moeda.metade_moeda(valor):.2f}')
         while True:
-            porcentagem = str(input('Digite uma porcentagem que deseja aumentar no valor inserido: '))
-            if porcentagem.isnumeric():
-                porcentagem = int(porcentagem)
-                break
-            else:
+            x = 0
+            porcentagem = str(input('Digite uma porcentagem que deseja aumentar no valor inserido: ')).replace(',', '.')
+            if porcentagem.isalpha():
+                x = -1
+            if x == -1:
                 print('Valor inválido!')
+            if x != -1:
+                porcentagem = float(porcentagem)
+                break
         print(f'O valor R${valor} com {porcentagem}% de acréscimo fica em R${moeda.aumentar_moeda(valor, porcentagem):.2f}')
         while True:
-            porcentagem1 = str(input('Digite uma porcentagem que deseja diminuir do valor inserido: '))
-            if porcentagem1.isnumeric():
-                porcentagem1 = int(porcentagem1)
-                break
-            else:
+            y = 0
+            porcentagem1 = str(input('Digite uma porcentagem que deseja diminuir do valor inserido: ')).replace(',', '.')
+            if porcentagem1.isalpha():
+                y = -1
+            if y == -1:
                 print('Valor inválido!')
+            if y != -1:
+                porcentagem1 = float(porcentagem1)
+                break
         print(f'O valor R${valor} com {porcentagem1}% de diminuição fica em R${moeda.diminuir_moeda(valor, porcentagem):.2f}')
         while True:
             r1 = str(input('Deseja continuar? [S/N] '))
