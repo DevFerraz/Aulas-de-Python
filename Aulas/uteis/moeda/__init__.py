@@ -19,4 +19,4 @@ def aumentar_moeda(n, p):
 def diminuir_moeda(n, p):
     if n == -1:
         return 'Número inválido!'
-    return n - n * p / 100
+    return n - ((n * p) / 100)
