@@ -17,8 +17,8 @@ while True:
         lerArquivo(arq)
         time.sleep(1.5)
     elif resposta == 3:
-        validacao = leiaInt('Digite o número do ID do paciente: ')
-        pacienteId(validacao)
+        codigo = leiaInt('Digite o número do ID do paciente: ')
+        pacienteId(arq, codigo)
         time.sleep(1.5)
     elif resposta == 4:
         cabecalho('\033[36mSaindo do sistema... Até logo! \033[m')

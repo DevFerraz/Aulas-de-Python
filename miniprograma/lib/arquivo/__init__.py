@@ -23,9 +23,9 @@ def criarArquivo(nome):
         print(f'Arquivo {nome} criado com sucesso! ')
 
 
-def lerArquivo(nome):
+def lerArquivo(arq):
     try:
-        a = open(nome, 'rt')
+        a = open(arq, 'rt')
     except Exception as error:
         print(f'Erro {error} ao ler o arquivo.')
     else:
@@ -55,10 +55,17 @@ def cadastrar(arq, nome='desconhecido', codigo=0):
             a.close()
 
 
-def pacienteId(num):
+def pacienteId(arq, num):
     try:
-        a = open(num, 'rt')
-        print(num)
+        a = open(arq, 'rt')
+        for linha in a:
+            dado = linha.split(';')
+            dado[1] = dado[1].replace('\n', '')
+            idDaVez = int(dado[1])
+            if idDaVez == num:
+                print(f'Com o código \033[32m{dado[1]}\033[m encontramos o paciente \033[32m{dado[0]:<20}\033[m')
+                return
+        print(f'Não foi encontrado nenhum paciente com código {num}')
         a.close()
     except Exception as error2:
         print(f'Houve um erro {error2} na sua solicitação. ')
