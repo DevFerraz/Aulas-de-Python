@@ -18,7 +18,7 @@ while True:
         time.sleep(1.5)
     elif resposta == 3:
         validacao = leiaInt('Digite o número do ID do paciente: ')
-        cadastrar(validacao)
+        pacienteId(validacao)
         time.sleep(1.5)
     elif resposta == 4:
         cabecalho('\033[36mSaindo do sistema... Até logo! \033[m')

@@ -33,7 +33,7 @@ def lerArquivo(nome):
         for linha in a:
             dado = linha.split(';')
             dado[1] = dado[1].replace('\n', '')
-            print(f'{dado[0]:<20}{dado[1]:>3} anos')
+            print(f'Nome: {dado[0]:<20} Código: {dado[1]:>3}')
     finally:
         a.close()
 
